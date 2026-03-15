@@ -3,6 +3,7 @@
 struct stat;
 
 // system calls
+int getfreemem(void);
 int getyear(void);
 int fork(void);
 int exit(int) __attribute__((noreturn));

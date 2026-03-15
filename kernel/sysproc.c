@@ -6,7 +6,13 @@
 #include "spinlock.h"
 #include "proc.h"
 #include "vm.h"
-
+uint64
+sys_getfreemem(void)
+{
+    extern char end[];   // end of kernel memory
+    uint64 free_mem = (PHYSTOP - (uint64)end) / 1024; // free memory in KB approx
+    return free_mem;
+}
 uint64
 sys_getyear(void)
 {
