@@ -3,6 +3,7 @@
 struct stat;
 
 // system calls
+int getyear(void);
 int fork(void);
 int exit(int) __attribute__((noreturn));
 int wait(int*);
@@ -24,7 +25,6 @@ int getpid(void);
 char* sys_sbrk(int,int);
 int pause(int);
 int uptime(void);
-
 // ulib.c
 int stat(const char*, struct stat*);
 char* strcpy(char*, const char*);

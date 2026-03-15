@@ -8,6 +8,12 @@
 #include "vm.h"
 
 uint64
+sys_getyear(void)
+{
+    return 2026;
+}
+
+uint64
 sys_exit(void)
 {
   int n;
